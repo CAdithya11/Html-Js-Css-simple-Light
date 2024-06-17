@@ -4,7 +4,7 @@ This project creates a light effect that follows the mouse cursor, illuminating 
 
 ## Demo
 
-![Light Effect](light-effect.png)
+![Light Effect](Screenshot%202024-06-17%20100601.png)
 
 ## Features
 
