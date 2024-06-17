@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+      }
+      h2 {
+        color: rgb(255, 255, 255);
+        font-size: 15em;
+        cursor: default;
+      }
+      .light {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background: radial-gradient(circle at 50%, transparent 10%, rgba(0, 0, 0, 0.95) 20%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <h2>Light</h2>
+    <div class="light"></div>
+    <script>
+      document.addEventListener('mousemove', function (event) {
+        var posx = event.clientX;
+        var posy = event.clientY;
+
+        var light = document.querySelector('.light');
+        light.style.background = `radial-gradient(circle at ${posx}px ${posy}px, transparent 10%, rgba(0, 0, 0, 0.95) 20%)`;
+      });
+    </script>
+  </body>
+</html>
